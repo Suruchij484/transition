@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+</head>
+<style>
+  
+    .one{
+      display: flex;
+    }
+  
+    .box{
+        height: 150px;
+        width: 150px; 
+        background-color: blueviolet;
+        color: rgb(6, 0, 0);
+        text-align: center;
+        border-radius: 1px solid black;
+        position: relative;
+        animation: moverightandbecomecircle 10s ease-in-out infinite;
+      }
+      @keyframes moverightandbecomecircle{
+            0%{
+                transform: translateX(0);
+                border-radius: 0%;}
+            50%{
+                transform: translateX(800px);
+                border-radius: 50%; }
+            100%{
+                transform: translateX(0);
+                border-radius: 0%; }
+      }
+
+    .circle{
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        background-color: rgb(255, 238, 0);
+        color: rgb(13, 1, 1);
+        text-align: center;
+        border-radius: 1px solid black;
+        position: relative;
+        animation: moverightandbecomesquare 5s ease-in-out infinite;
+        
+        
+    }
+    @keyframes moverightandbecomesquare{
+      0%{
+        transform: translateX(0);
+        border-radius: 50%;
+      }
+      50%{
+        transform: translateX(800px);
+        border-radius:0% ;
+      }
+      100%{
+        transform: translateX(0);
+        border-radius:50% ;
+      }
+    }
+  
+
+</style>
+<body>
+    <div class="one">
+    <div class="box">
+        BOX
+        to
+        circle
+    </div>
+    <div class="circle">
+         CIRCLE
+         to box
+    </div>
+    </div>
+</body>
+</html>
